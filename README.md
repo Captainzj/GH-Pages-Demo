@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## About GitHub Pages
 
-* [Tutorial](https://pages.github.com/)、 [documentation](https://help.github.com/categories/github-pages-basics/) 
+* [Tutorial](https://pages.github.com/) and [documentation](https://help.github.com/categories/github-pages-basics/) 
 
 ### [gh-pages 404](https://github.community/t5/GitHub-Pages/pages-user-site-not-published/td-p/2425)
 
@@ -20,7 +20,8 @@ this fixed the problem for me.
 [Solution](https://help.github.com/cn/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages): 启用 GitHub 页面以从 master 或 gh-pages 发布站点 (`分支命名固定`)
 
 ## About Git 
-* [Tutorial](https://www.liaoxuefeng.com/wiki/896043488029600)
+* [廖雪峰 Tutorial](https://www.liaoxuefeng.com/wiki/896043488029600)
+
 ### git clone 速度慢
 1. 查找域名对应的ip地址
 
@@ -65,4 +66,10 @@ $ git branch -m <oldName> <newName>  # a. 重命名远程分支对应的本地�
 $ git push --delete origin <oldName>  # b. 删除远程分支
 $ git push origin <newName> # c. 上传新命名的本地分支
 $ git branch --set-upstream-to origin/<newName>  # d.把修改后的本地分支与远程分支关联
+```
+
+### Remove .DS_Store
+
+```shell
+$ echo .DS_Store >> .gitignore
 ```
