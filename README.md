@@ -1,37 +1,55 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Captainzj/Study/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+* [Tutorial](https://pages.github.com/)
+* [documentation](https://help.github.com/categories/github-pages-basics/) 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### Wrong
+#### gh-pages 404
+[Solution](https://github.community/t5/GitHub-Pages/pages-user-site-not-published/td-p/2425)
 ```markdown
-Syntax highlighted code block
+I got a 404 error when I navigated to <username>.github.io/<repo-name>
 
-# Header 1
-## Header 2
-### Header 3
+What worked for me was
+-ensuring my repo was public
+-changing the name of my repo to a new name (to repo-name2 for example) and then
+-updating the package.json file with "homepage": "http://<username>.github.io/<repo-name2>"
+-then running npm run deploy command again
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+this fixed the problem for me.
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### 无法使用其他分支作为GitHub Pages source
+[Solution](https://help.github.com/cn/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages): 启用 GitHub 页面以从 master 或 gh-pages 发布站点 (`分支命名固定`)
 
-### Jekyll Themes
+## About Git 
+* [Tutorial](https://www.liaoxuefeng.com/wiki/896043488029600)
+### git clone 速度慢
+1. 查找域名对应的ip地址
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Captainzj/Study/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![](./media/git-fastly.png)
 
-### Support or Contact
+2. 修改hosts文件
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```shell
+$ sudo vi /etc/hosts
+```
+add the follow lines into 'hosts'
+```vim
+# github
+199.59.148.140 github.global.ssl.fastly.Net
+52.74.223.119  github.com
+```
+
+3. 刷新DNS缓存
+
+```shell
+$ sudo killall -HUP mDNSResponder
+```
+
+### 配置别名
+[Solution](https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424)
+
+
+### git修改分支名称
+
+[Solution](jianshu.com/p/cc740394faf5)
