@@ -1,7 +1,6 @@
 ## Welcome to GitHub Pages
 
-* [Tutorial](https://pages.github.com/)
-* [documentation](https://help.github.com/categories/github-pages-basics/) 
+* [Tutorial](https://pages.github.com/)、 [documentation](https://help.github.com/categories/github-pages-basics/) 
 
 ### Wrong
 #### gh-pages 404
