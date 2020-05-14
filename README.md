@@ -2,8 +2,8 @@
 
 * [Tutorial](https://pages.github.com/)、 [documentation](https://help.github.com/categories/github-pages-basics/) 
 
-### gh-pages 404
-[Solution](https://github.community/t5/GitHub-Pages/pages-user-site-not-published/td-p/2425)
+### [gh-pages 404](https://github.community/t5/GitHub-Pages/pages-user-site-not-published/td-p/2425)
+
 ```markdown
 I got a 404 error when I navigated to <username>.github.io/<repo-name>
 
