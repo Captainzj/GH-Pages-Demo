@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <script async defer="defer" src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131578973-1"></script>
+    <script>
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-131578973-1")
+    </script>
+    <link rel="shortcut icon" href="/handtrack.js/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/handtrack.js/manifest.json" />
+    <link rel="stylesheet" href="https://unpkg.com/carbon-components@9.0.1/css/carbon-components.min.css">
+    <title>Handtrackjs. A library for Prototyping Hand Interactions in the Browser</title>
+    <link href="/handtrack.js/static/css/main.3b092c1c.chunk.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="containerwrap">
+            <div class="aside sidebar">
+                <div id="sidebar">
+                    <div class="sidebarcontent">
+                        <div class="sidebartitle"><span class="bx--type-epsilon"> handtrack.js </span><span class="lighttext"> </span></div>
+                        <a href="https://badge.fury.io/js/handtrackjs"><img src="https://badge.fury.io/js/handtrackjs.svg" alt="npm version" height="18"></a><br><br>
+                        <div class="sidebarlinks"><a class="active" aria-current="page" href="#/">demo</a></div>
+                        <div class="sidebarlinks"><a href="#/doodle">doodle</a></div>
+                        <div class="sidebarlinks"><a href="#/game"> pong game </a></div>
+                        <div class="sidebarlinks"><a href="#/video">video </a></div>
+                        <div class="sidebarlinks"><a href="#/about">about</a></div><br><br><span></span><br>
+                        <div class="mt10"></div>
+                        <div>
+                            <div><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 76px; height: 28px;"
+                                    title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.c63890edc4243ee77048d507b181eeec.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fvictordibia.github.io%2Fhandtrack.js%2F%23%2F&amp;size=l&amp;text=Handtrack.js%3A%20How%20to%20Track%20Hands%20in%20the%20Browser%20using%20Tensorflow.js%20and%203%20lines%20of%C2%A0code%20&amp;time=1588827315373&amp;type=share&amp;url=https%3A%2F%2Fmedium.com%2F%40victor.dibia%2Fhandtrackjs-677c29c1d585&amp;via=vykthur"
+                                    data-url="https://medium.com/@victor.dibia/handtrackjs-677c29c1d585"></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aside maincontent">
+                <div id="header">
+                    <div class="headerbox pad20 ">
+                        <div class="bx--type-mega">Handtrack.js</div><span class="lighttext"> A library for prototyping realtime handtracking in the browser. [<a href="https://github.com/victordibia/handtrack.js/">Github</a>]</span><br></div>
+                </div>
+                <div class="pagecontent bottomcontent pad20">
+                    <div class="">
+                        <div class="pagetitle">Demo</div><br>
+                        <div class="clickable">
+                            <div class="hidden"></div>
+                            <div class="hidden"> Attention needed</div>
+                            <div class="bluehightlight mb10">All detection is done in the browser! <span class="lighttext"> Click on an image or  Start video</span></div>
+                            <div><button id="videobutton" tabindex="0" class="bx--btn bx--btn--primary" type="button">   ▶ ️ Start WebCam Detection </button>
+                                <div class="bx--form-item bx--checkbox-wrapper  flipimagecheckbox"><input id="flipimagecheckbox" class="bx--checkbox" type="checkbox" name="checkbox" value="new"><label for="flipimagecheckbox" class="bx--checkbox-label"> Flip Image </label></div>
+                            </div>
+                            <div class="flex mt10">
+                                <div class="flexfull">
+                                    <div id="instruction" class="lighttext pb10 ">Modify confidence score threshold.</div>
+                                    <div class="mt10 flex  mr20 ">
+                                        <div class="slidecontainer flexfull  "><input type="range" val="70" min="1" max="100" class="slider" id="confidencerange"></div>
+                                        <div class="iblock confidencethreshold "> 0.7 </div>
+                                    </div>
+                                    <div class="bluehightlight mb10 lh10 mr20">Detection not working as expected? Change the confidence threshold value. The right threshold may depend on your <span class="boldtext">camera</span> and <span class="boldtext">lighting</span> conditions.</div>
+                                    <div class="scrollholdbox "><img src="/handtrack.js/static/media/0.401840ba.jpg" alt="" class="handimagebox handimageselected"><img src="/handtrack.js/static/media/1.71d1d1d3.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/2.2de0d22a.jpg"
+                                            alt="" class="handimagebox"><img src="/handtrack.js/static/media/3.0fef6bcf.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/4.0d13a8b0.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/5.ca8bdcab.jpg"
+                                            alt="" class="handimagebox"><img src="/handtrack.js/static/media/6.41988fc1.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/7.00ef4aaf.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/8.c04fb220.jpg"
+                                            alt="" class="handimagebox"><img src="/handtrack.js/static/media/9.e641a945.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/10.9621bbbc.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/11.c238e436.jpg"
+                                            alt="" class="handimagebox"><img src="/handtrack.js/static/media/12.973b8ab8.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/13.728701d2.jpg" alt="" class="handimagebox"><img src="/handtrack.js/static/media/14.9ef2f1c4.jpg"
+                                            alt="" class="handimagebox"><img src="/handtrack.js/static/media/15.1f5880d6.jpg" alt="" class="handimagebox"></div>
+                                </div>
+                                <div class="flex5 "><canvas id="canvas" class="canvasbox" width="507" height="380"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="videoboxes "></div><img id="imgholder" class="imgholder hidden" src="https://victordibia.github.io/handtrack.js/static/media/0.401840ba.jpg" alt="" height="380" width="507"><video class="videobox hidden" id="myvideo" width="507"></video></div>
+                </div>
+                <div id="footer">
+                    <div>Made with <span class="redcolor">♥</span> by <a href="https://twitter.com/vykthur" target="blank">Victor Dibia</a>. Designed using <a href="http://carbondesignsystem.com" target="blank">Carbon Design System.</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/planck-js@0.3.3/dist/planck-with-testbed.js"></script>
+    <script></script>
+    <script>
+        ! function(l) {
+            function e(e) {
+                for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++) t = n[f], c[t] && i.push(c[t][0]), c[t] = 0;
+                for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]);
+                for (s && s(e); i.length;) i.shift()();
+                return p.push.apply(p, u || []), a()
+            }
+
+            function a() {
+                for (var e, r = 0; r < p.length; r++) {
+                    for (var t = p[r], n = !0, o = 1; o < t.length; o++) {
+                        var u = t[o];
+                        0 !== c[u] && (n = !1)
+                    }
+                    n && (p.splice(r--, 1), e = f(f.s = t[0]))
+                }
+                return e
+            }
+            var t = {},
+                c = {
+                    1: 0
+                },
+                p = [];
+
+            function f(e) {
+                if (t[e]) return t[e].exports;
+                var r = t[e] = {
+                    i: e,
+                    l: !1,
+                    exports: {}
+                };
+                return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports
+            }
+            f.m = l, f.c = t, f.d = function(e, r, t) {
+                f.o(e, r) || Object.defineProperty(e, r, {
+                    enumerable: !0,
+                    get: t
+                })
+            }, f.r = function(e) {
+                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                    value: "Module"
+                }), Object.defineProperty(e, "__esModule", {
+                    value: !0
+                })
+            }, f.t = function(r, e) {
+                if (1 & e && (r = f(r)), 8 & e) return r;
+                if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+                var t = Object.create(null);
+                if (f.r(t), Object.defineProperty(t, "default", {
+                        enumerable: !0,
+                        value: r
+                    }), 2 & e && "string" != typeof r)
+                    for (var n in r) f.d(t, n, function(e) {
+                        return r[e]
+                    }.bind(null, n));
+                return t
+            }, f.n = function(e) {
+                var r = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return f.d(r, "a", r), r
+            }, f.o = function(e, r) {
+                return Object.prototype.hasOwnProperty.call(e, r)
+            }, f.p = "/handtrack.js/";
+            var r = window.webpackJsonp = window.webpackJsonp || [],
+                n = r.push.bind(r);
+            r.push = e, r = r.slice();
+            for (var o = 0; o < r.length; o++) e(r[o]);
+            var s = n;
+            a()
+        }([])
+    </script>
+    <script src="/handtrack.js/static/js/2.0051cba6.chunk.js"></script>
+    <script src="/handtrack.js/static/js/main.94ac58c8.chunk.js"></script>
+</body>
+
+</html>
