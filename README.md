@@ -44,10 +44,25 @@ add the follow lines into 'hosts'
 $ sudo killall -HUP mDNSResponder
 ```
 
-### 配置别名
-[Solution](https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424)
+### [配置别名](https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424)
 
+```shell
+$ git config --global alias.st status
+$ git config --global alias.co checkout
+$ git config --global alias.ci commit
+$ git config --global alias.br branch
+$ git config --global alias.unstage 'reset HEAD'
+$ git config --global alias.last 'log -1'
+...
+```
 
-### git修改分支名称
+### [git修改分支名称](https://www.jianshu.com/p/cc740394faf5)
 
-[Solution](jianshu.com/p/cc740394faf5)
+远程分支重命名 (已经推送远程-假设本地分支和远程对应分支名称相同)
+
+```shell
+$ git branch -m <oldName> <newName>  # a. 重命名远程分支对应的本地分支
+$ git push --delete origin <oldName>  # b. 删除远程分支
+$ git push origin <newName> # c. 上传新命名的本地分支
+$ git branch --set-upstream-to origin/<newName>  # d.把修改后的本地分支与远程分支关联
+```
