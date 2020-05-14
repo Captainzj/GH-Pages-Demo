@@ -73,3 +73,8 @@ $ git branch --set-upstream-to origin/<newName>  # d.把修改后的本地分支
 ```shell
 $ echo .DS_Store >> .gitignore
 ```
+
+### Others
+
+* [修改github账号的用户名](https://blog.csdn.net/superballball/article/details/78915752)
+
